@@ -4,8 +4,7 @@ const sequelize = require('../config/connection');
 const User = require('./User');
 const Game = require('./Game');
 
-class Scores extends Model {
-}
+class Scores extends Model {}
 
 Scores.init(
     {

@@ -1,1 +1,12 @@
-<h1>Game</h1>
+<section class = "container">
+<h2 id="gameHeader">Game</h2>
+<div id = "canvas">{{game}}</div>
+<h2 id="score">Scores</h2>
+<div id = "scoreList">
+    <ul>
+        {{#each scores}}
+            <li>{{this.score}}</li>
+        {{/each}}
+    </ul>
+</div>
+</section>
