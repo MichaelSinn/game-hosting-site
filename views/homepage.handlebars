@@ -2,14 +2,13 @@
     <div class="columns is-multiline is-centered">
         {{#each games as |game|}}
             <div class="column is-one-third">
-                <a href="/{{game.id}}">
+                <a href="/game/{{game.id}}">
                     <article class="card">
                         <div class="card-header">
                             <h2 class="card-header-title">{{game.name}}</h2>
                         </div>
                         <div class="card-content">
                             <p>{{game.description}}</p>
-
                         </div>
                     </article>
                 </a>

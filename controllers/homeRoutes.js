@@ -5,27 +5,27 @@ const games = [
     {
         name: "Game 1",
         description: "Some game",
-        link: "6"
+        id: "6"
     },
     {
         name: "Game 2",
         description: "Some game",
-        link: "5"
+        id: "5"
     },
     {
         name: "Game 3",
         description: "Some game",
-        link: "4"
+        id: "4"
     },
     {
         name: "Game 1",
         description: "Some game",
-        link: "3"
+        id: "3"
     },
     {
         name: "Game 2",
         description: "Some game",
-        link: "2"
+        id: "2"
     },
     {
         name: "Game 3",
@@ -36,12 +36,6 @@ const games = [
 
 router.get('/', (req, res) => {
     res.render('homepage', {games});
-});
-
-router.get('/:game_id', async (req, res)=>{
-    const gameData = await Game.findByPk(req.params.id);
-    const game = gameData.get({plain: true});
-    res.render("gamepage", game);
 });
 
 module.exports = router;
