@@ -20,6 +20,11 @@ Game.init (
         script: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        hero_image: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: "coming-soon.jpg"
         }
     },
     {
