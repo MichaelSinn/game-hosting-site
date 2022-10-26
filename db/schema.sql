@@ -1,0 +1,3 @@
+DROP IF EXISTS Games_db
+
+CREATE DATABASE Games_db
