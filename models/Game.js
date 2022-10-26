@@ -17,14 +17,6 @@ Game.init (
             type: DataTypes.STRING,
             allowNull: false,
         },
-        score_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: Score,
-                key: 'id',
-            }
-        },
         script: {
             type: DataTypes.STRING,
             allowNull: false
