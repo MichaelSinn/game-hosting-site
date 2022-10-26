@@ -1,13 +1,14 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+const Score = require('./Scores');
 
 class Game extends Model {}
 
 Game.init (
     {
         id: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
@@ -20,10 +21,13 @@ Game.init (
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'score',
+                model: Score,
                 key: 'id',
             }
-
+        },
+        script: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {
@@ -31,8 +35,8 @@ Game.init (
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'game',
     }
-)
+);
 
 module.exports = Game
