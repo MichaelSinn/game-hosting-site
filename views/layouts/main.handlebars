@@ -15,15 +15,18 @@
     <nav class="navbar">
         <a class="navbar-item" href="/">Home</a>
         <a class="navbar-item" href="/leaderboard">Leaderboard</a>
-        {{#if loggedIn}}
-            <a class="navbar-item navbar-end" href="#">Sign in</a>
+        {{#if logged_in}}
+            <a class="navbar-item navbar-end" id="logout" href="#">Logout</a>
         {{else}}
-            <a class="navbar-item navbar-end" href="#">Logout</a>
+            <a class="navbar-item navbar-end" href="/login">Sign in</a>
         {{/if}}
     </nav>
 </header>
 <main>
     {{{ body }}}
 </main>
+{{#if logged_in}}
+    <script src="/js/logout.js"></script>
+{{/if}}
 </body>
 </html>
