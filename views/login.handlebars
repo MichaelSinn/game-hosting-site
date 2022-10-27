@@ -1,6 +1,6 @@
 <div class="columns is-centered mt-6 is-max-desktop">
     <form id="login-form" class="column is-one-third">
-        <h2 class="title block is-center">Login</h2>
+        <h2 class="title">Login</h2>
         <div class="field">
             <label class="label" for="email-login">Email</label>
             <div class="control">
@@ -15,8 +15,14 @@
         </div>
         <button type="submit" class="button">Login</button>
     </form>
-    <form class="column is-one-quarter">
-        <h2 class="title block is-center">Sign up</h2>
+    <form id="signup-form" class="column is-one-quarter">
+        <h2 class="title">Sign up</h2>
+        <div class="field">
+            <label class="label" for="name-signup">Name</label>
+            <div class="control">
+                <input class="input" id="name-signup" type="text" placeholder="e.g. Alex Smith">
+            </div>
+        </div>
         <div class="field">
             <label class="label" for="email-signup">Email</label>
             <div class="control">
@@ -29,6 +35,7 @@
                 <input class="input" id="password-signup" type="password">
             </div>
         </div>
+        <button type="submit" class="button">Sign up</button>
     </form>
 </div>
 
