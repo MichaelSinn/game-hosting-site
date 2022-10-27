@@ -49,7 +49,7 @@ router.post('/signup', async (req, res)=>{
                 email: req.body.email
             }
         });
-        if (existingUser) return res.status(400).json({message: "User with that email already exists"})
+        if (existingUser) return res.status(400).json({message: "User with that email already exists"});
         const userData = await User.create(req.body);
         req.session.logged_in = true;
         res.status(200).json(userData);
