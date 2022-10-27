@@ -3,3 +3,9 @@
     flex-direction: column;
     align-items: center;
 }
+
+.content {
+    display: inline-block;
+}
+
+
