@@ -33,7 +33,12 @@ const signupFormHandler = async (event) => {
             headers: {'Content-Type': 'application/json'}
         });
 
-        response.ok ? document.location.replace('/') : alert('Failed to sign up');
+        if (response.ok){
+            document.location.replace('/')
+        }else{
+            const {message} = await response.json();
+            alert(message);
+        }
     }
 }
 
