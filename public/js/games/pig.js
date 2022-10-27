@@ -26,7 +26,7 @@ class Pig{
         }
 
         this.offScreen = function() {
-            return this.y < -50 || this.y > 500
+            return this.y < -250 || this.y > 500
         }
     }
 }
@@ -74,8 +74,10 @@ function shoot(){
 }
 
 function mousePressed(){
-    playSound = gunshot.cloneNode();
-    playSound.play();
+    if (mouseX > 0 && mouseX < 400 && mouseY > 0 && mouseY < 400){
+        playSound = gunshot.cloneNode();
+        playSound.play();
 
-    shoot();
+        shoot();
+    }
 }
