@@ -9,7 +9,7 @@
   },
   {
     "name": "game3",
-    "script": "empty"
+    "script": "<script src = '/js/games/snake/canvas.js'></script> <script src = '/js/games/snake/snake.js'></script> <script src = '/js/games/snake/food.js'></script>"
   },
   {
     "name": "game4",
