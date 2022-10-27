@@ -11,7 +11,7 @@ router.get('/', async (req, res)=>{
         where: {
             game_id: 1
         },
-        include: [{model: Game}, {model: User}],
+        include: [{model: User}],
         order: [ ['score', 'DESC']],
 
     })
@@ -20,7 +20,7 @@ router.get('/', async (req, res)=>{
         where: {
             game_id: 2
         },
-        include: [{model: Game}, {model: User}],
+        include: [{model: User}],
         order: [ ['score', 'DESC']],
 
     })
@@ -29,7 +29,7 @@ router.get('/', async (req, res)=>{
         where: {
             game_id: 3
         },
-        include: [{model: Game}, {model: User}],
+        include: [{model: User}],
         order: [ ['score', 'DESC']],
 
     })
@@ -38,7 +38,7 @@ router.get('/', async (req, res)=>{
         where: {
             game_id: 4
         },
-        include: [{model: Game}, {model: User}],
+        include: [{model: User}],
         order: [ ['score', 'DESC']],
 
     })
@@ -47,7 +47,7 @@ router.get('/', async (req, res)=>{
         where: {
             game_id: 5
         },
-        include: [{model: Game}, {model: User}],
+        include: [{model: User}],
         order: [ ['score', 'DESC']],
 
     })
@@ -56,7 +56,7 @@ router.get('/', async (req, res)=>{
         where: {
             game_id: 6
         },
-        include: [{model: Game}, {model: User}],
+        include: [{model: User}],
         order: [ ['score', 'DESC']],
 
     })
