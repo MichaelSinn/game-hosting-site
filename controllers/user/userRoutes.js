@@ -44,11 +44,17 @@ router.post('/logout', (req, res) => {
 
 router.post('/signup', async (req, res)=>{
     try{
+        const existingUser = await User.findOne({
+            where: {
+                email: req.body.email
+            }
+        });
+        if (existingUser) return res.status(400).json({message: "User with that email already exists"});
         const userData = await User.create(req.body);
         req.session.logged_in = true;
         res.status(200).json(userData);
     }catch(e){
-        res.status(500).json(e);
+        res.status(500).json({message: "Something went wrong"});
     }
 })
 
