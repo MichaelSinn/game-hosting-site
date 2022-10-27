@@ -28,7 +28,16 @@ const loginFormHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/');
         } else {
-            alert('Failed to log in');
+            const emailField = document.querySelector('#email-login');
+            emailField.classList.add("is-danger");
+            const emailSection = document.querySelector('#email-login-section');
+            if (!document.getElementById("email-warning-tag")) {
+                const warningTag = document.createElement('p');
+                warningTag.innerText = "Email or password is incorrect";
+                warningTag.id = "email-warning-tag";
+                warningTag.className = "help is-danger";
+                emailSection.appendChild(warningTag);
+            }
         }
     }
 };
@@ -43,7 +52,7 @@ const signupFormHandler = async (event) => {
     if (password.length < 8) {
         const passwordField = document.querySelector('#password-signup');
         passwordField.classList.add("is-danger");
-        const passwordSection = document.querySelector('#password-section');
+        const passwordSection = document.querySelector('#password-signup-section');
         if (!document.getElementById("password-warning-tag")) {
             const warningTag = document.createElement('p');
             warningTag.innerText = "Password must be at least 8 characters";
@@ -67,7 +76,7 @@ const signupFormHandler = async (event) => {
             if (message === 'User with that email already exists') {
                 const emailField = document.querySelector('#email-signup');
                 emailField.classList.add("is-danger");
-                const emailSection = document.querySelector('#email-section');
+                const emailSection = document.querySelector('#email-signup-section');
                 if (!document.getElementById("email-warning-tag")) {
                     const warningTag = document.createElement('p');
                     warningTag.innerText = "Please use a unique email";
