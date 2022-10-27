@@ -1,17 +1,33 @@
-<h2>Login</h2>
+<!--<form class="form login-form">-->
+<!--  <div class="form-group">-->
+<!--    <label for="email-login">email:</label>-->
+<!--    <input class="form-input" type="text" id="email-login" />-->
+<!--  </div>-->
+<!--  <div class="form-group">-->
+<!--    <label for="password-login">password:</label>-->
+<!--    <input class="form-input" type="password" id="password-login" />-->
+<!--  </div>-->
+<!--  <div class="form-group">-->
+<!--    <button class="btn btn-primary" type="submit">login</button>-->
+<!--  </div>-->
+<!--</form>-->
 
-<form class="form login-form">
-  <div class="form-group">
-    <label for="email-login">email:</label>
-    <input class="form-input" type="text" id="email-login" />
-  </div>
-  <div class="form-group">
-    <label for="password-login">password:</label>
-    <input class="form-input" type="password" id="password-login" />
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary" type="submit">login</button>
-  </div>
-</form>
+<div class="columns is-centered mt-6">
+    <form class="container is-max-desktop">
+        <h2 class="title block is-center">Login</h2>
+        <div class="field">
+            <label class="label" for="email-login">Email</label>
+            <div class="control">
+                <input class="input" id="email-login" type="email" placeholder="e.g. alexsmith@gmail.com">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="password-login">Password</label>
+            <div class="control">
+                <input class="input" id="password-login" type="password">
+            </div>
+        </div>
+    </form>
+</div>
 
 <script src="/js/login.js"></script>
