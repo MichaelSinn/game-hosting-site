@@ -1,11 +1,11 @@
 <div class="columns is-centered mt-6">
-    <section class="column is-two-thirds container game-container">
+    <section class="column is-half container game-container ">
         <div class="card">
             <div class="card-header has-background-primary">
                 <h2 class="card-header-title">{{game.name}}</h2>
             </div>
             <div class="card-content">
-                <div id="gameCanvas" class="is-center"></div>
+                <div id="gameCanvas"></div>
             </div>
         </div>
 
@@ -19,4 +19,4 @@
         </ul>
     </section>
 </div>
-<script src="/js/games/game.js"></script>
+<script src="/js/games/{{game.script}}"></script>
