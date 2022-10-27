@@ -1,4 +1,4 @@
-.container {
+.game-container {
     display: grid;
     grid-template-columns: [col1-start] 50px [col1-end-col2-start] 800px [col2-end-col3-start] 20px [col3-end-col4-start] 300px;
     grid-template-rows: [row1-start] 60px [row1-end-row2-start] 600px ;
