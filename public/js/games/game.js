@@ -13,7 +13,7 @@ function setup(){
 
 function draw(){
     background(220);
-    fill(color(0, 120, 30));
+    fill(color(0, 120, 120));
     rect(xPos, yPos, characterSize, characterSize);
 
     let xSpd = (keyIsDown(68) - keyIsDown(65)) * spd;
