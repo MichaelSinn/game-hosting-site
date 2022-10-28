@@ -56,6 +56,6 @@ router.post('/signup', async (req, res)=>{
     }catch(e){
         res.status(500).json({message: "Something went wrong"});
     }
-})
+});
 
 module.exports = router;

@@ -26,7 +26,7 @@ class Pig{
         }
 
         this.offScreen = function() {
-            return this.y < -250 || this.y > 500
+            return this.y < -250 || this.y > 500;
         }
     }
 }
