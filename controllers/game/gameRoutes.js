@@ -9,8 +9,9 @@ router.get('/:game_id', async (req, res)=>{
             where: {
                 game_id: req.params.game_id,
             },
+            limit: 5,
             order: [ ['score', 'DESC']]
-        })
+        });
     const scores = scoreData.map((score) => score.get({plain: true}));
     const game = gameData.get({plain: true});
     console.log(game)
