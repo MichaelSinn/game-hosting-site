@@ -1,4 +1,6 @@
-let gunshot, pigs, sky;
+let gunshot, pigs, sky, score;
+let gameOver = false;
+let lives = 3;
 
 class Pig{
     constructor() {
@@ -31,6 +33,14 @@ class Pig{
     }
 }
 
+const end = async function(){
+    const response = await fetch('/user/login', {
+        method: 'POST',
+        body: JSON.stringify({score}),
+        headers: {'Content-Type': 'application/json'},
+    });
+}
+
 function setup(){
     const canvasSize = 400;
     const canvas = createCanvas(canvasSize, canvasSize);
@@ -41,20 +51,31 @@ function setup(){
     for (let i = 0; i < 3; i++){
         pigs.push(new Pig());
     }
+    score = 0;
 }
 
 function draw(){
     noCursor();
     image(sky,0,0);
-
-    pigs.forEach((pig, index) =>{
-        pig.draw();
-        pig.move();
-        if (pig.offScreen()){
-            pigs.splice(index, 1);
-            pigs.push(new Pig());
-        }
-    });
+    if (!gameOver) {
+        pigs.forEach((pig, index) => {
+            pig.draw();
+            pig.move();
+            if (pig.offScreen()) {
+                pigs.splice(index, 1);
+                pigs.push(new Pig());
+                lives--;
+            }
+        });
+    }
+    if(lives <= 0){
+        gameOver = true;
+        end();
+    }
+    fill(color(255,255,255));
+    textSize(30);
+    textAlign(CENTER);
+    text(score, 200, 50);
     drawCursor();
 }
 
@@ -69,6 +90,7 @@ function shoot(){
     pigs.forEach(pig =>{
         if (mouseX < pig.x + 64 && mouseX > pig.x && mouseY < pig.y + 90 && mouseY > pig.y) {
             pig.hit = true;
+            score ++;
         }
     });
 }

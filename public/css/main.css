@@ -8,8 +8,12 @@
     display: inline-block;
 }
 
+.game-card{
+    border: 2px transparent solid;
+}
+
 .game-card:hover{
-    border: 2px red inset;
+    border: 2px #e74343 solid;
 }
 
 

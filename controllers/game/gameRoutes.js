@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const Game = require("../../models/Game");
-const Scores = require('../../models/Scores')
-const User = require('../../models/User')
+const Scores = require('../../models/Scores');
 
 router.get('/:game_id', async (req, res)=>{
 
