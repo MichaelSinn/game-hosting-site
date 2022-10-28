@@ -10,7 +10,7 @@
     "hero_image": "pig_hero.png"
   },
   {
-    "name": "game3",
+    "name": "Snake Game",
     "script": "canvas-snake.js",
     "hero_image": "snake.png"
   },

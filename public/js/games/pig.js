@@ -1,4 +1,6 @@
-let gunshot, pigs, sky;
+let gunshot, pigs, sky, score;
+let gameOver = false;
+let lives = 3;
 
 class Pig{
     constructor() {
@@ -26,9 +28,34 @@ class Pig{
         }
 
         this.offScreen = function() {
-            return this.y < -250 || this.y > 500
+            return this.y < -250 || this.y > 500;
+        }
+
+        this.escaped = function(){
+            return this.y < -250;
         }
     }
+}
+
+const end = async function(){
+    const response = await fetch(`${window.location.href}`, {
+        method: 'POST',
+        body: JSON.stringify({score}),
+        headers: {'Content-Type': 'application/json'},
+    });
+    if (response.ok){
+        console.log("Score added");
+    }
+}
+
+function resetGame(){
+    gameOver = false;
+    lives = 3;
+    pigs = [];
+    for (let i = 0; i < 3; i++){
+        pigs.push(new Pig());
+    }
+    score = 0;
 }
 
 function setup(){
@@ -37,24 +64,36 @@ function setup(){
     canvas.parent("gameCanvas");
     gunshot = new Audio("../sounds/shot.mp3");
     sky = loadImage("../images/sky.png");
-    pigs = [];
-    for (let i = 0; i < 3; i++){
-        pigs.push(new Pig());
-    }
+    resetGame();
 }
 
 function draw(){
     noCursor();
     image(sky,0,0);
-
-    pigs.forEach((pig, index) =>{
-        pig.draw();
-        pig.move();
-        if (pig.offScreen()){
-            pigs.splice(index, 1);
-            pigs.push(new Pig());
-        }
-    });
+    if(lives <= 0){
+        gameOver = true;
+    }
+    if (!gameOver) {
+        pigs.forEach((pig, index) => {
+            pig.draw();
+            pig.move();
+            if (pig.offScreen()) {
+                if (pig.escaped()){
+                    lives--;
+                }
+                pigs.splice(index, 1);
+                pigs.push(new Pig());
+            }
+        });
+    }else{
+        end();
+        resetGame();
+    }
+    fill(color(255,255,255));
+    textSize(30);
+    textAlign(CENTER);
+    text(score, 200, 50);
+    text(lives, 20, 50);
     drawCursor();
 }
 
@@ -69,6 +108,7 @@ function shoot(){
     pigs.forEach(pig =>{
         if (mouseX < pig.x + 64 && mouseX > pig.x && mouseY < pig.y + 90 && mouseY > pig.y) {
             pig.hit = true;
+            score ++;
         }
     });
 }
