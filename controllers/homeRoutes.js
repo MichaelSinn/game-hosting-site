@@ -39,7 +39,7 @@ router.get('/leaderboard', async (req, res) => {
         const id = gameId.get({plain: true}).game_id;
         const game = gameId.game.get({plain:true}).name;
         return {id, game};
-    }); // Get all game IDs
+    }); // Get all game IDs and their names
     let gameScoreQuery = "SELECT u.* FROM (";
     gameIds.forEach((gameId, index) => {
         gameScoreQuery += `(SELECT score, game_id, u2.name as player FROM score s JOIN user u2 on s.user_id = u2.id WHERE game_id = ${gameId.id} ORDER BY score DESC LIMIT 5)`;
@@ -48,8 +48,6 @@ router.get('/leaderboard', async (req, res) => {
     gameScoreQuery += ") as u;";
 
     const scores = await sequelize.query(gameScoreQuery, {type: Sequelize.QueryTypes.SELECT});
-    console.log(gameIds);
-    console.log(scores);
     res.render("leaderboard", {logged_in: req.session.logged_in, gameIds, scores});
 })
 ;
