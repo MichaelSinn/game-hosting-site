@@ -6,11 +6,11 @@
                     <div class="card-header has-background-primary">
                         <h2 class="card-header-title">{{game}}</h2>
                     </div>
-                    <div class="card-image">
-                        <ul>
+                    <div class="card-image p-5 pl-4">
+                        <ul class="score">
                             {{#../scores}}
                                 {{#if (eq game_id ../id)}}
-                                    <li>{{player}}: {{score}}</li>
+                                    <li><strong>{{player}}</strong>: {{score}}</li>
                                 {{/if}}
                             {{/../scores}}
                         </ul>
