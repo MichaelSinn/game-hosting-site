@@ -9,8 +9,9 @@ router.get('/:game_id', async (req, res)=>{
             where: {
                 game_id: req.params.game_id,
             },
-            limit: 5,
+            include: [{model: User}],
             order: [ ['score', 'DESC']]
+            limit: 5,
         });
     const scores = scoreData.map((score) => score.get({plain: true}));
     const game = gameData.get({plain: true});

@@ -13,10 +13,30 @@
         <h2 class="title">Scores</h2>
         <ul>
             {{#each scores}}
-                <li>{{this.score}}</li>
+                <li>{{this.user.name}}: {{this.score}}</li>
             {{/each}}
         </ul>
     </section>
 </div>
+<div id="modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div  class="field">
+            <label class="label">Score</label>
+            <div id = "score" class="control">
+                <input  class="input" type="text" placeholder="Score">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">User Name</label>
+            <div class="control">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<script src = "/js/games/snake.js"></script>
 <script src = "/js/games/{{game.script}}"></script>
 

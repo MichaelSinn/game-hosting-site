@@ -1,3 +1,5 @@
+let modal = document.getElementById("modal")
+let score = document.getElementById("score")
 let snake;
 let res = 25;
 let food;
@@ -41,6 +43,8 @@ function draw(){
     snake.update();
     snake.show();
     if (snake.death()) {
+        modal.classList.add("is-active")
+        score.innerHTML = (snake.body.length)
         print("END GAME")
         print(snake.body.length) // score! need to pass to a form/modal
         noLoop();
