@@ -63,7 +63,7 @@ const postScore = async function () {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({score})
-    })
+    });
     if (response.ok) {
         console.log("Score added");
     }

@@ -2,6 +2,8 @@ const router = require('express').Router();
 const Game = require("../models/Game");
 const Scores = require("../models/Scores");
 const User = require("../models/User");
+const sequelize = require("../config/connection");
+const {Sequelize} = require("sequelize");
 
 router.get('/', async (req, res) => {
     const gamesData = await Game.findAll();
@@ -29,62 +31,25 @@ router.get('/signup', (req, res) => {
 
 // TODO: Optimize
 router.get('/leaderboard', async (req, res) => {
-    const scoreData1 = await Scores.findAll({
-        limit: 10,
-        where: {
-            game_id: 1
-        },
-        include: [{model: User}],
-        order: [['score', 'DESC']],
+    const gameIdsData = await Scores.findAll({
+        include: [{model: Game}],
+        group: 'game_id'
     });
-    const scoreData2 = await Scores.findAll({
-        limit: 10,
-        where: {
-            game_id: 2
-        },
-        include: [{model: User}],
-        order: [['score', 'DESC']],
+    const gameIds = gameIdsData.map(gameId => {
+        const id = gameId.get({plain: true}).game_id;
+        const game = gameId.game.get({plain:true}).name;
+        return {id, game};
+    }); // Get all game IDs and their names
+    let gameScoreQuery = "SELECT u.* FROM (";
+    gameIds.forEach((gameId, index) => {
+        gameScoreQuery += `(SELECT score, game_id, u2.name as player FROM score s JOIN user u2 on s.user_id = u2.id WHERE game_id = ${gameId.id} ORDER BY score DESC LIMIT 5)`;
+        if (index < gameIds.length - 1) gameScoreQuery += " UNION ";
     });
-    const scoreData3 = await Scores.findAll({
-        limit: 10,
-        where: {
-            game_id: 3
-        },
-        include: [{model: User}],
-        order: [['score', 'DESC']],
-    });
-    const scoreData4 = await Scores.findAll({
-        limit: 10,
-        where: {
-            game_id: 4
-        },
-        include: [{model: User}],
-        order: [['score', 'DESC']],
-    });
-    const scoreData5 = await Scores.findAll({
-        limit: 10,
-        where: {
-            game_id: 5
-        },
-        include: [{model: User}],
-        order: [['score', 'DESC']],
-    });
-    const scoreData6 = await Scores.findAll({
-        limit: 10,
-        where: {
-            game_id: 6
-        },
-        include: [{model: User}],
-        order: [['score', 'DESC']],
-    });
-    const scores1 = scoreData1.map((score) => score.get({plain: true}));
-    const scores2 = scoreData2.map((score) => score.get({plain: true}));
-    const scores3 = scoreData3.map((score) => score.get({plain: true}));
-    const scores4 = scoreData4.map((score) => score.get({plain: true}));
-    const scores5 = scoreData5.map((score) => score.get({plain: true}));
-    const scores6 = scoreData6.map((score) => score.get({plain: true}));
+    gameScoreQuery += ") as u;";
 
-    res.render("leaderboard", {logged_in: req.session.logged_in, scores1, scores2, scores3, scores4, scores5, scores6});
-});
+    const scores = await sequelize.query(gameScoreQuery, {type: Sequelize.QueryTypes.SELECT});
+    res.render("leaderboard", {logged_in: req.session.logged_in, gameIds, scores});
+})
+;
 
 module.exports = router;
