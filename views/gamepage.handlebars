@@ -1,18 +1,18 @@
-<div class="columns is-centered is-desktop mt-6">
-    <section class="column is-two-thirds container game-container">
+<div class="columns is-centered mt-6">
+    <section class="column is-half container game-container ">
         <div class="card">
             <div class="card-header has-background-primary">
                 <h2 class="card-header-title">{{game.name}}</h2>
             </div>
             <div class="card-content">
-                <div id="gameCanvas" class="is-center">
 
-                </div>
+                <div id="gameCanvas"></div>
+
             </div>
         </div>
 
     </section>
-    <section class="column has-text-left-desktop has-text-centered">
+    <section class="column is-one-third">
         <h2 class="title">Scores</h2>
         <ul>
             {{#each scores}}
@@ -23,5 +23,4 @@
 </div>
 <script src = "/js/games/snake.js"></script>
 <script src = "/js/games/{{game.script}}"></script>
-
 

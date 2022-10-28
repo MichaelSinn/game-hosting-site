@@ -1,11 +1,13 @@
 [
   {
-    "name": "game1",
-    "script": "empty"
+    "name": "Timmy Game",
+    "script": "timmy.js",
+    "hero_image": "timmy_hero.png"
   },
   {
-    "name": "game2",
-    "script": "empty"
+    "name": "Pop the Pig",
+    "script": "pig.js",
+    "hero_image": "pig_hero.png"
   },
   {
     "name": "game3",
