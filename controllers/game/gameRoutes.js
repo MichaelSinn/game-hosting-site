@@ -21,10 +21,10 @@ router.post('/:game_id', async (req,res) => {
     const scoreData = await Scores.create({
         order: ['score'],
         score: req.body.score,
-        user_id: req.body.user_id,
+        user_id: req.session.user_id,
         game_id: req.params.game_id,
     });
     res.status(200).json(scoreData)
-})
+});
 
 module.exports = router;
