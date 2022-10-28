@@ -51,11 +51,12 @@ router.post('/signup', async (req, res)=>{
         });
         if (existingUser) return res.status(400).json({message: "User with that email already exists"});
         const userData = await User.create(req.body);
+        req.session.user_id = userData.id;
         req.session.logged_in = true;
         res.status(200).json(userData);
     }catch(e){
         res.status(500).json({message: "Something went wrong"});
     }
-})
+});
 
 module.exports = router;
