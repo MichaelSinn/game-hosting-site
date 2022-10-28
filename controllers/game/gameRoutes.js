@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Game = require("../../models/Game");
 const Scores = require('../../models/Scores');
+const User = require('../../models/User')
 
 router.get('/:game_id', async (req, res)=>{
 
@@ -10,22 +11,22 @@ router.get('/:game_id', async (req, res)=>{
                 game_id: req.params.game_id,
             },
             include: [{model: User}],
-            order: [ ['score', 'DESC']]
+            order: [['score', 'ASC']],
             limit: 5,
         });
     const scores = scoreData.map((score) => score.get({plain: true}));
     const game = gameData.get({plain: true});
-    console.log(game)
     res.render("gamepage", {game, logged_in: req.session.logged_in, scores});
 });
 
 router.post('/:game_id', async (req,res) => {
+    console.log(req.params.game_id)
     const scoreData = await Scores.create({
-        order: ['score'],
         score: req.body.score,
         user_id: req.session.user_id,
         game_id: req.params.game_id,
     });
+    console.log(scoreData)
     res.status(200).json(scoreData)
 });
 

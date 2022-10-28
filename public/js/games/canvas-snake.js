@@ -1,5 +1,7 @@
 let modal = document.getElementById("modal")
-let score = document.getElementById("score")
+let scoreEl = document.getElementById("score")
+let submit = document.getElementById("submitScore")
+let score;
 let snake;
 let res = 25;
 let food;
@@ -44,9 +46,8 @@ function draw(){
     snake.show();
     if (snake.death()) {
         modal.classList.add("is-active")
-        score.innerHTML = (snake.body.length)
-        print("END GAME")
-        print(snake.body.length) // score! need to pass to a form/modal
+        scoreEl.innerHTML = (snake.body.length)
+        score = snake.body.length
         noLoop();
     }
 
@@ -54,3 +55,25 @@ function draw(){
     fill(255, 255, 0);
     rect(food.x, food.y, 1, 1);
 }
+
+const postScore = async function () {
+    const response = await fetch(`${window.location.href}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({score})
+    })
+    if (response.ok) {
+        console.log("Score added");
+    }
+}
+
+
+submit.addEventListener("click", (event) => {
+    event.preventDefault()
+
+    postScore()
+        .then((data) => console.log('score added'))
+        .catch((err) => console.log(err))
+})
