@@ -1,6 +1,6 @@
 <div class="columns is-centered mt-6">
-    <section class="column is-half container game-container ">
-        <div class="card">
+    <section class="column is-two-fifths container game-container ">
+        <div class="card is-pulled-right">
             <div class="card-header has-background-primary">
                 <h2 class="card-header-title">{{game.name}}</h2>
             </div>
@@ -9,28 +9,30 @@
             </div>
         </div>
     </section>
-    <section class="column is-one-third">
-        <h2 class="title">Scores</h2>
-        <ul>
-            {{#each scores}}
-                <li>{{this.user.name}}: {{this.score}}</li>
-            {{/each}}
-        </ul>
+    <section class="column is-two-fifths">
+        <div class="box has-text-centered is-pulled-left p-5">
+            <h2 class="title">Scores</h2>
+            <ul>
+                {{#each scores}}
+                    <li><strong>{{this.user.name}}</strong>: {{this.score}}</li>
+                {{/each}}
+            </ul>
+        </div>
     </section>
 </div>
 <div id="modal" class="modal">
     <div class="modal-background"></div>
     <div class="modal-content">
-        <div  class="field">
+        <div class="field">
             <label class="label">Score</label>
-            <div id = "score" class="control">
-                <input  class="input" type="text" placeholder="Score">
+            <div id="score" class="control">
+                <input class="input" type="text" placeholder="Score">
             </div>
         </div>
         <button id="submitScore">Submit Score</button>
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
 </div>
-<script src = "/js/games/snake.js"></script>
-<script src = "/js/games/{{game.script}}"></script>
+<script src="/js/games/snake.js"></script>
+<script src="/js/games/{{game.script}}"></script>
 
