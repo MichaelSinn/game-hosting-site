@@ -18,8 +18,8 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/signup', (req, res) =>{
-    if (req.session.logged_in){
+router.get('/signup', (req, res) => {
+    if (req.session.logged_in) {
         res.redirect('/');
         return;
     }
@@ -27,62 +27,56 @@ router.get('/signup', (req, res) =>{
     res.render('signup');
 });
 
-router.get('/leaderboard', async (req, res)=>{
-
+// TODO: Optimize
+router.get('/leaderboard', async (req, res) => {
     const scoreData1 = await Scores.findAll({
         limit: 10,
         where: {
             game_id: 1
         },
         include: [{model: User}],
-        order: [ ['score', 'DESC']],
-
-    })
+        order: [['score', 'DESC']],
+    });
     const scoreData2 = await Scores.findAll({
         limit: 10,
         where: {
             game_id: 2
         },
         include: [{model: User}],
-        order: [ ['score', 'DESC']],
-
-    })
+        order: [['score', 'DESC']],
+    });
     const scoreData3 = await Scores.findAll({
         limit: 10,
         where: {
             game_id: 3
         },
         include: [{model: User}],
-        order: [ ['score', 'DESC']],
-
-    })
+        order: [['score', 'DESC']],
+    });
     const scoreData4 = await Scores.findAll({
         limit: 10,
         where: {
             game_id: 4
         },
         include: [{model: User}],
-        order: [ ['score', 'DESC']],
-
-    })
+        order: [['score', 'DESC']],
+    });
     const scoreData5 = await Scores.findAll({
         limit: 10,
         where: {
             game_id: 5
         },
         include: [{model: User}],
-        order: [ ['score', 'DESC']],
-
-    })
+        order: [['score', 'DESC']],
+    });
     const scoreData6 = await Scores.findAll({
         limit: 10,
         where: {
             game_id: 6
         },
         include: [{model: User}],
-        order: [ ['score', 'DESC']],
-
-    })
+        order: [['score', 'DESC']],
+    });
     const scores1 = scoreData1.map((score) => score.get({plain: true}));
     const scores2 = scoreData2.map((score) => score.get({plain: true}));
     const scores3 = scoreData3.map((score) => score.get({plain: true}));
