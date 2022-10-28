@@ -5,13 +5,16 @@ const User = require('../../models/User')
 
 router.get('/:game_id', async (req, res)=>{
 
+        const userData = await User.findAll();
         const gameData = await Game.findByPk(req.params.game_id);
         const scoreData = await Scores.findAll({
             where: {
                 game_id: req.params.game_id,
             },
+            include: [{model: User}],
             order: [ ['score', 'DESC']]
         })
+    console.log(userData)
     const scores = scoreData.map((score) => score.get({plain: true}));
     const game = gameData.get({plain: true});
     console.log(game)

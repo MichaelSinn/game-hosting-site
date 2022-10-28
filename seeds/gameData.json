@@ -11,7 +11,8 @@
   },
   {
     "name": "game3",
-    "script": "canvas-snake.js"
+    "script": "canvas-snake.js",
+    "hero_image": "snake.png"
   },
   {
     "name": "game4",
