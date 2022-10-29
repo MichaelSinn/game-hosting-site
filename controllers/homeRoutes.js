@@ -8,7 +8,8 @@ const {Sequelize} = require("sequelize");
 router.get('/', async (req, res) => {
     const gamesData = await Game.findAll();
     const games = gamesData.map(game => game.get({plain: true}));
-    res.render('homepage', {games, logged_in: req.session.logged_in});
+    const firstGame = games.shift()
+    res.render('homepage', {games, firstGame, logged_in: req.session.logged_in});
 });
 
 router.get('/login', (req, res) => {

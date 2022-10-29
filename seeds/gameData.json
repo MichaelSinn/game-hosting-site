@@ -1,18 +1,18 @@
 [
   {
-    "name": "Timmy Game",
-    "script": "timmy.js",
-    "hero_image": "timmy_hero.png"
-  },
-  {
     "name": "Pop the Pig",
     "script": "pig.js",
-    "hero_image": "pig_hero.png"
+    "hero_image": "pig-gif.gif"
+  },
+  {
+    "name": "Timmy Game",
+    "script": "timmy.js",
+    "hero_image": "timmy-gif.gif"
   },
   {
     "name": "Snake Game",
     "script": "canvas-snake.js",
-    "hero_image": "snake.png"
+    "hero_image": "snake-gif.gif"
   },
   {
     "name": "game4",
