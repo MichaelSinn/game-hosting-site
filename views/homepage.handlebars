@@ -1,20 +1,24 @@
-<section class="container mt-6">
-    <div class="columns is-multiline is-centered">
-        {{#each games as |game|}}
-            <div class="column is-one-fifth">
-                <a href="/game/{{game.id}}">
-                    <article class="card">
-                        <div class="card-header has-background-primary">
-                            <h2 class="card-header-title">{{game.name}}</h2>
-                        </div>
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="images/{{game.hero_image}}" alt="Placeholder image">
-                            </figure>
-                        </div>
-                    </article>
-                </a>
-            </div>
-        {{/each}}
+
+<section aria-label="newest photo" class="carouselbox">
+    <div class = "carousel" data-carousel>
+        <button class ="next carousel-button" data-carousel-button="next">&#8658;</button>
+        <button class ="prev carousel-button" data-carousel-button="prev">&#8656;</button>
+        <ul data-slides>
+            <li class ="slide" data-active>
+                <a href="/game/{{firstGame.id}}"><button class ="game carousel-button">Play Game</button></a>
+                <img src="images/{{firstGame.hero_image}}" alt ="{{firstGame.name}} image">
+            </li>
+            {{#each games as | game |}}
+            <li class="slide">
+                <a href="/game/{{game.id}}"><button class ="game carousel-button">Play Game</button></a>
+                <img src="images/{{game.hero_image}}" alt ="{{game.name}} image">
+            </li>
+            {{/each}}
+        </ul>
     </div>
 </section>
+<script src="/js/carousel.js"></script>
+
+
+
+
