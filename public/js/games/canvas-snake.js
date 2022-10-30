@@ -1,15 +1,17 @@
-let modal = document.getElementById("modal")
+let submitEl = document.getElementById("submitEl")
 let scoreEl = document.getElementById("score")
 let submit = document.getElementById("submitScore")
+let playAgain = document.getElementById("playAgain")
+let continueEl = document.getElementById("continue")
 let score;
 let snake;
-let res = 25;
+let res = 20;
 let food;
 let w;
 let h;
 
 function setup(){
-    let canvas = createCanvas(500, 500);
+    let canvas = createCanvas(400, 400);
     canvas.parent('gameCanvas')
     w = floor(width / res);
     h = floor(height / res);
@@ -45,7 +47,7 @@ function draw(){
     snake.update();
     snake.show();
     if (snake.death()) {
-        modal.classList.add("is-active")
+        submitEl.style.display = "block"
         scoreEl.innerHTML = (snake.body.length)
         score = snake.body.length
         noLoop();
@@ -70,10 +72,16 @@ const postScore = async function () {
 }
 
 
-submit.addEventListener("click", (event) => {
-    event.preventDefault()
-
+submit.addEventListener("click", () => {
     postScore()
         .then((data) => console.log('score added'))
         .catch((err) => console.log(err))
+    submitEl.style.display = "none"
+    playAgain.style.display = "block"
 })
+
+continueEl.addEventListener("click", () => {
+    playAgain.style.display = "none"
+    location.reload()
+})
+

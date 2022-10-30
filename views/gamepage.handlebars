@@ -5,7 +5,20 @@
                 <h2 class="card-header-title">{{game.name}}</h2>
             </div>
             <div class="card-content">
-                <div id="gameCanvas"></div>
+                <div id="gameCanvas">
+                            <div class="field" id="submitEl">
+                                <p class="score-label">Score</p>
+                                <div id="score" class="control">
+                                    <input class="input" type="text" placeholder="Score">
+                                </div>
+                                <button id="submitScore">Submit Score</button>
+                            </div>
+                    <div class="field" id ="playAgain">
+                        <p class = "continue">Score has been submitted<br>
+                            Press Continue to play again</p>
+                        <button id="continue">Continue</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -20,19 +33,7 @@
         </div>
     </section>
 </div>
-<div id="modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-        <div class="field">
-            <label class="label">Score</label>
-            <div id="score" class="control">
-                <input class="input" type="text" placeholder="Score">
-            </div>
-        </div>
-        <button id="submitScore">Submit Score</button>
-    </div>
-    <button class="modal-close is-large" aria-label="close"></button>
-</div>
+
 <script src="/js/games/snake.js"></script>
 <script src="/js/games/{{game.script}}"></script>
 
