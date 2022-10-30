@@ -4,7 +4,7 @@
         <button class="prev carousel-button" data-carousel-button="prev"><</button>
         <ul data-slides>
             {{#each games as |game|}}
-                <li class="slide" {{#eq @index 0}}data-active="true"{{/eq}}>
+                <li class="slide" {{#if (eq @index 0)}}data-active="true"{{/if}}>
                     <a href="/game/{{game.id}}">
                         <button class="game carousel-button">Play</button>
                     </a>
