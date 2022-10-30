@@ -6,18 +6,7 @@
             </div>
             <div class="card-content">
                 <div id="gameCanvas">
-                            <div class="field" id="submitEl">
-                                <p class="score-label">Score</p>
-                                <div id="score" class="control">
-                                    <input class="input" type="text" placeholder="Score">
-                                </div>
-                                <button id="submitScore">Submit Score</button>
-                            </div>
-                    <div class="field" id ="playAgain">
-                        <p class = "continue">Score has been submitted<br>
-                            Press Continue to play again</p>
-                        <button id="continue">Continue</button>
-                    </div>
+                    {{> submitscore-details}}
                 </div>
             </div>
         </div>
@@ -34,6 +23,5 @@
     </section>
 </div>
 
-<script src="/js/games/snake.js"></script>
 <script src="/js/games/{{game.script}}"></script>
 

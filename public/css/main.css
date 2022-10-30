@@ -102,8 +102,7 @@ h2{
     transform: translate(-50%, -50%);
 }
 
-.score-label,
-.control {
+.score-label{
     color: #2aefcb;
     font-size: 24px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -115,14 +114,14 @@ h2{
     border-radius: 25px;
 }
 
-.field {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    display: none;
-}
+/*.field {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    text-align: center;*/
+/*    display: none;*/
+/*}*/
 
 #continue{
     margin-top: 20px;
