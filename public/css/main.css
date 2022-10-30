@@ -16,14 +16,11 @@
     box-sizing: border-box;
 }
 
-.carouselbox {
-    margin: 0;
-}
-
 .carousel {
-    width: 100vw;
-    height: 100vh;
+    width: 50vw;
+    height: 50vh;
     position: relative;
+    margin: 50px auto;
 }
 
 .slide {
