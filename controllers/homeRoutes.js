@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 router.get('/games', async (req, res) => {
     const gamesData = await Game.findAll();
     const games = gamesData.map(game => game.get({plain: true}));
-    res.render('homepage', {games, logged_in: req.session.logged_in});
+    res.render('games', {games, logged_in: req.session.logged_in});
 });
 
 router.get('/login', (req, res) => {
