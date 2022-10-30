@@ -1,18 +1,16 @@
-
-<section aria-label="newest photo" class="carouselbox">
-    <div class = "carousel" data-carousel>
-        <button class ="next carousel-button" data-carousel-button="next">&#8658;</button>
-        <button class ="prev carousel-button" data-carousel-button="prev">&#8656;</button>
+<section class="games-section">
+    <h2>Featured Games</h2>
+    <div class="carousel" data-carousel>
+        <button class="next carousel-button" data-carousel-button="next">></button>
+        <button class="prev carousel-button" data-carousel-button="prev"><</button>
         <ul data-slides>
-            <li class ="slide" data-active>
-                <a href="/game/{{firstGame.id}}"><button class ="game carousel-button">Play Game</button></a>
-                <img src="images/{{firstGame.hero_image}}" alt ="{{firstGame.name}} image">
-            </li>
-            {{#each games as | game |}}
-            <li class="slide">
-                <a href="/game/{{game.id}}"><button class ="game carousel-button">Play Game</button></a>
-                <img src="images/{{game.hero_image}}" alt ="{{game.name}} image">
-            </li>
+            {{#each games as |game|}}
+                <li class="slide" {{#if (eq @index 0)}}data-active="true"{{/if}}>
+                    <a href="/game/{{game.id}}">
+                        <button class="game carousel-button">Play</button>
+                    </a>
+                    <img src="images/{{game.hero_image}}" alt="{{game.name}} image">
+                </li>
             {{/each}}
         </ul>
     </div>
