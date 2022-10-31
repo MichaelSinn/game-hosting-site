@@ -2,18 +2,20 @@
   {
     "name": "Pop the Pig",
     "script": "pig.js",
-    "hero_image": "pig-gif.gif"
+    "hero_image": "pig-gif.gif",
+    "instructions": "Pop the pigs' balloons before they escape! Press 'Left Mouse Click' in order to pop a balloon. After 3 pigs escape, the game is over."
   },
   {
     "name": "Timmy Game",
     "script": "timmy.js",
-    "hero_image": "timmy-gif.gif"
+    "hero_image": "timmy-gif.gif",
+    "instructions": "A filler game. Move around with WASD and explore the nothingness! Press 'Shift + Left Mouse Click' on a flower to change to that colour. Press 'Left Mouse Click' to plant a new flower. You cannot get any score, and there is nothing to do. Have fun!"
   },
   {
     "name": "Snake Game",
     "script": "snake.js",
     "hero_image": "snake-gif.gif",
-    "instructions": "Description: As the player you start off as a single block looking for food. Travel around the map in search of food to grow, as you collect food you grow. Be careful to not run into your tail! Hitting your tail or the edges of the map end the game. Do you think you have what it takes to beat the highscore? Instructions: <br> Use the ARROW KEYS to move around the map",
+    "instructions": "Description: As the player you start off as a single block looking for food. Travel around the map in search of food to grow, as you collect food you grow. Be careful to not run into your tail! Hitting your tail or the edges of the map end the game. Do you think you have what it takes to beat the highscore? Instructions: <br> Use the ARROW KEYS to move around the map"
   },
   {
     "name": "game4",
