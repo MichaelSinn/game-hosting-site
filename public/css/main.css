@@ -69,7 +69,7 @@ h2 {
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
-    box-shadow: 10px 10px 19px 0px rgba(255, 255, 255, 0.52);
+    box-shadow: 10px 10px 19px 0 rgba(255, 255, 255, 0.52);
 }
 
 .slide[data-active] {

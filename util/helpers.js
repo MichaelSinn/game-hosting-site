@@ -1,5 +1,5 @@
 module.exports = {
-    eq: function(a, b){
-        return a === b;
-    }
-}
+	eq: function (a, b) {
+		return a === b;
+	}
+};

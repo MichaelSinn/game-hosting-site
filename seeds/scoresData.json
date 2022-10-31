@@ -10,10 +10,10 @@
     "game_id": 1
   },
   {
-  "score": 25,
-  "user_id": 5,
-  "game_id": 1
-},
+    "score": 25,
+    "user_id": 5,
+    "game_id": 1
+  },
   {
     "score": 30,
     "user_id": 6,
@@ -52,7 +52,7 @@
   {
     "score": 15,
     "user_id": 1,
-    "game_id":2
+    "game_id": 2
   },
   {
     "score": 20,
@@ -102,7 +102,7 @@
   {
     "score": 15,
     "user_id": 1,
-    "game_id":3
+    "game_id": 3
   },
   {
     "score": 20,
@@ -152,7 +152,7 @@
   {
     "score": 15,
     "user_id": 1,
-    "game_id":4
+    "game_id": 4
   },
   {
     "score": 20,
@@ -197,12 +197,12 @@
   {
     "score": 100,
     "user_id": 1,
-    "game_id":4
+    "game_id": 4
   },
   {
     "score": 15,
     "user_id": 1,
-    "game_id":5
+    "game_id": 5
   },
   {
     "score": 20,
@@ -252,7 +252,7 @@
   {
     "score": 15,
     "user_id": 1,
-    "game_id":6
+    "game_id": 6
   },
   {
     "score": 20,
