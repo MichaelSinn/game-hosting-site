@@ -25,6 +25,11 @@ Game.init (
             type: DataTypes.STRING,
             allowNull: false,
             defaultValue: "coming-soon.jpg"
+        },
+        instructions: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            defaultValue: "Coming Soon"
         }
     },
     {
