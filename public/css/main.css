@@ -145,6 +145,10 @@ h2 {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+#game {
+    height: 500px;
+}
+
 @media screen and (max-width: 1024px) {
     .carousel-button {
         font-size: 2rem;
