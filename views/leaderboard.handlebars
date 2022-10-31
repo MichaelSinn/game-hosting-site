@@ -1,22 +1,22 @@
 <section class="container is-max-desktop mt-6">
-    <div class="columns is-multiline is-centered">
-        {{#gameIds}}
-            <div class="column is-one-third">
-                <article class="card">
-                    <div class="card-header has-background-primary">
-                        <h2 class="card-header-title">{{game}}</h2>
-                    </div>
-                    <div class="card-image p-5 pl-4">
-                        <ul class="score">
-                            {{#../scores}}
-                                {{#if (eq game_id ../id)}}
-                                    <li><strong>{{player}}</strong>: {{score}}</li>
-                                {{/if}}
-                            {{/../scores}}
-                        </ul>
-                    </div>
-                </article>
-            </div>
-        {{/gameIds}}
-    </div>
+	<div class="columns is-multiline is-centered">
+		{{#gameIds}}
+			<div class="column is-one-third">
+				<article class="card">
+					<div class="card-header has-background-primary">
+						<h2 class="card-header-title">{{game}}</h2>
+					</div>
+					<div class="card-image p-5 pl-4">
+						<ul class="score">
+							{{#../scores}}
+								{{#if (eq game_id ../id)}}
+									<li><strong>{{player}}</strong>: {{score}}</li>
+								{{/if}}
+							{{/../scores}}
+						</ul>
+					</div>
+				</article>
+			</div>
+		{{/gameIds}}
+	</div>
 </section>
