@@ -11,7 +11,7 @@
   },
   {
     "name": "Snake Game",
-    "script": "canvas-snake.js",
+    "script": "snake.js",
     "hero_image": "snake-gif.gif"
   },
   {
