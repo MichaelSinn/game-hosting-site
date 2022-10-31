@@ -1,19 +1,20 @@
-<section class="games-section">
-    <h2>Featured Games</h2>
-    <div class="carousel" data-carousel>
-        <button class="next carousel-button" data-carousel-button="next">></button>
-        <button class="prev carousel-button" data-carousel-button="prev"><</button>
-        <ul data-slides>
-            {{#each games as |game|}}
-                <li class="slide" {{#if (eq @index 0)}}data-active="true"{{/if}}>
-                    <a href="/game/{{game.id}}">
-                        <button class="game carousel-button">Play</button>
-                    </a>
-                    <img src="images/{{game.hero_image}}" alt="{{game.name}} image">
-                </li>
-            {{/each}}
-        </ul>
-    </div>
+<h2 class="box mt-3">Featured Games</h2>
+<section class="games-section box">
+	<div class="carousel" data-carousel>
+		<button class="next carousel-button" data-carousel-button="next">></button>
+		<button class="prev carousel-button" data-carousel-button="prev"><</button>
+		<ul data-slides>
+			{{#each games as |game|}}
+				<li class="slide" {{#if (eq @index 0)}}data-active="true"{{/if}}>
+					<h3 class="game-title has-background-primary p-2">{{game.name}}</h3>
+					<a href="/game/{{game.id}}">
+						<button class="game carousel-button" id="play-button">Play</button>
+					</a>
+					<img src="images/{{game.hero_image}}" alt="{{game.name}} image">
+				</li>
+			{{/each}}
+		</ul>
+	</div>
 </section>
 <script src="/js/carousel.js"></script>
 
