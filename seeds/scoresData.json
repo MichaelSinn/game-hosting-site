@@ -5,7 +5,7 @@
     "game_id": 1
   },
   {
-    "score": 20,
+    "score": 2,
     "user_id": 2,
     "game_id": 1
   },
@@ -15,7 +15,7 @@
     "game_id": 1
   },
   {
-    "score": 30,
+    "score": 3,
     "user_id": 6,
     "game_id": 1
   },
@@ -25,27 +25,27 @@
     "game_id": 1
   },
   {
-    "score": 40,
+    "score": 4,
     "user_id": 4,
     "game_id": 1
   },
   {
-    "score": 50,
+    "score": 5,
     "user_id": 1,
     "game_id": 1
   },
   {
-    "score": 60,
+    "score": 6,
     "user_id": 3,
     "game_id": 1
   },
   {
-    "score": 80,
+    "score": 8,
     "user_id": 2,
     "game_id": 1
   },
   {
-    "score": 100,
+    "score": 1,
     "user_id": 1,
     "game_id": 1
   },
@@ -55,7 +55,7 @@
     "game_id": 2
   },
   {
-    "score": 20,
+    "score": 2,
     "user_id": 2,
     "game_id": 2
   },
@@ -65,7 +65,7 @@
     "game_id": 2
   },
   {
-    "score": 30,
+    "score": 3,
     "user_id": 6,
     "game_id": 2
   },
@@ -75,27 +75,27 @@
     "game_id": 2
   },
   {
-    "score": 40,
+    "score": 4,
     "user_id": 4,
     "game_id": 2
   },
   {
-    "score": 50,
+    "score": 5,
     "user_id": 1,
     "game_id": 2
   },
   {
-    "score": 60,
+    "score": 6,
     "user_id": 3,
     "game_id": 2
   },
   {
-    "score": 80,
+    "score": 8,
     "user_id": 2,
     "game_id": 2
   },
   {
-    "score": 100,
+    "score": 1,
     "user_id": 1,
     "game_id": 2
   },
@@ -105,7 +105,7 @@
     "game_id": 3
   },
   {
-    "score": 20,
+    "score": 2,
     "user_id": 2,
     "game_id": 3
   },
@@ -115,7 +115,7 @@
     "game_id": 3
   },
   {
-    "score": 30,
+    "score": 3,
     "user_id": 6,
     "game_id": 3
   },
@@ -125,27 +125,27 @@
     "game_id": 3
   },
   {
-    "score": 40,
+    "score": 4,
     "user_id": 4,
     "game_id": 3
   },
   {
-    "score": 50,
+    "score": 5,
     "user_id": 1,
     "game_id": 3
   },
   {
-    "score": 60,
+    "score": 6,
     "user_id": 3,
     "game_id": 3
   },
   {
-    "score": 80,
+    "score": 8,
     "user_id": 2,
     "game_id": 3
   },
   {
-    "score": 100,
+    "score": 1,
     "user_id": 1,
     "game_id": 3
   },
@@ -155,7 +155,7 @@
     "game_id": 4
   },
   {
-    "score": 20,
+    "score": 2,
     "user_id": 2,
     "game_id": 4
   },
@@ -165,7 +165,7 @@
     "game_id": 4
   },
   {
-    "score": 30,
+    "score": 3,
     "user_id": 6,
     "game_id": 4
   },
@@ -175,27 +175,27 @@
     "game_id": 4
   },
   {
-    "score": 40,
+    "score": 4,
     "user_id": 4,
     "game_id": 4
   },
   {
-    "score": 50,
+    "score": 5,
     "user_id": 1,
     "game_id": 4
   },
   {
-    "score": 60,
+    "score": 6,
     "user_id": 3,
     "game_id": 4
   },
   {
-    "score": 80,
+    "score": 8,
     "user_id": 2,
     "game_id": 4
   },
   {
-    "score": 100,
+    "score": 1,
     "user_id": 1,
     "game_id": 4
   },
@@ -205,7 +205,7 @@
     "game_id": 5
   },
   {
-    "score": 20,
+    "score": 2,
     "user_id": 2,
     "game_id": 5
   },
@@ -215,7 +215,7 @@
     "game_id": 5
   },
   {
-    "score": 30,
+    "score": 3,
     "user_id": 6,
     "game_id": 5
   },
@@ -225,27 +225,27 @@
     "game_id": 5
   },
   {
-    "score": 40,
+    "score": 4,
     "user_id": 4,
     "game_id": 5
   },
   {
-    "score": 50,
+    "score": 5,
     "user_id": 1,
     "game_id": 5
   },
   {
-    "score": 60,
+    "score": 6,
     "user_id": 3,
     "game_id": 5
   },
   {
-    "score": 80,
+    "score": 8,
     "user_id": 2,
     "game_id": 5
   },
   {
-    "score": 100,
+    "score": 1,
     "user_id": 1,
     "game_id": 5
   },
@@ -255,7 +255,7 @@
     "game_id": 6
   },
   {
-    "score": 20,
+    "score": 2,
     "user_id": 2,
     "game_id": 6
   },
@@ -265,7 +265,7 @@
     "game_id": 6
   },
   {
-    "score": 30,
+    "score": 3,
     "user_id": 6,
     "game_id": 6
   },
@@ -275,27 +275,27 @@
     "game_id": 6
   },
   {
-    "score": 40,
+    "score": 4,
     "user_id": 4,
     "game_id": 6
   },
   {
-    "score": 50,
+    "score": 5,
     "user_id": 1,
     "game_id": 6
   },
   {
-    "score": 60,
+    "score": 6,
     "user_id": 3,
     "game_id": 6
   },
   {
-    "score": 80,
+    "score": 8,
     "user_id": 2,
     "game_id": 6
   },
   {
-    "score": 100,
+    "score": 1,
     "user_id": 1,
     "game_id": 6
   }
