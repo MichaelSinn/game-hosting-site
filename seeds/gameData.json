@@ -2,7 +2,7 @@
   {
     "name": "Pop the Pig",
     "script": "pig.js",
-    "hero_image": "pig-gif.gif",
+    "hero_image": "Pig-gif.gif",
     "instructions": "Pop the pigs' balloons before they escape! Press 'Left Mouse Click' in order to pop a balloon. After 3 pigs escape, the game is over."
   },
   {
