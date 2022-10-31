@@ -15,7 +15,7 @@
     "name": "Snake Game",
     "script": "snake.js",
     "hero_image": "snake-gif.gif",
-    "instructions": "Description: As the player you start off as a single block looking for food. Travel around the map in search of food to grow, as you collect food you grow. Be careful to not run into your tail! Hitting your tail or the edges of the map end the game. Do you think you have what it takes to beat the highscore? Instructions: <br> Use the ARROW KEYS to move around the map"
+    "instructions": "Instructions: Use the ARROW KEYS to move around the map, the goal is to collect as much food as you can. The more food you collect the longer you grow. Hitting the edge of the screen or your own tail ends the game."
   },
   {
     "name": "game4",
