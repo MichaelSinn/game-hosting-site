@@ -1,16 +1,16 @@
-h2{
+h2 {
     font-size: 2.5rem;
 }
 
-.score > li:nth-child(1)::before{
+.score > li:nth-child(1)::before {
     content: "🏆";
 }
 
-.score > li:nth-child(2)::before{
+.score > li:nth-child(2)::before {
     content: "🥈";
 }
 
-.score > li:nth-child(3)::before{
+.score > li:nth-child(3)::before {
     content: "🥉";
 }
 
@@ -20,7 +20,7 @@ h2{
     box-sizing: border-box;
 }
 
-.games-section{
+.games-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,7 +62,7 @@ h2{
     transition-delay: 0ms;
 }
 
-.carousel-button{
+.carousel-button {
     position: absolute;
     z-index: 2;
     background: none;
@@ -77,12 +77,12 @@ h2{
 }
 
 .carousel-button:hover,
-.carousel-button:focus{
+.carousel-button:focus {
     color: white;
     background-color: rgba(0, 0, 0, .25);
 }
 
-.carousel-button:focus{
+.carousel-button:focus {
     outline: 1px solid black;
     transition: ease-in-out 200ms;
 }
@@ -102,7 +102,7 @@ h2{
     transform: translate(-50%, -50%);
 }
 
-.score-label{
+.score-label {
     color: #2aefcb;
     font-size: 24px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -114,16 +114,15 @@ h2{
     border-radius: 25px;
 }
 
-/*.field {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    text-align: center;*/
-/*    display: none;*/
-/*}*/
+#playAgain, #submitEl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
-#continue{
+#continue {
     margin-top: 20px;
     padding: 5px;
     background-color: #2aefcb;
