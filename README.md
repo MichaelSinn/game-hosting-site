@@ -31,7 +31,8 @@ After playing each game, submit your score and track your progress on the leader
 In order to see high scores for all games, go to the 'Leaderboard' page.
 Logout in the top right hand corner anytime you would like to logout.
 
-![alt text](assets/images/screenshot.png)
+![alt text](assets/images/Games-1.png)
+![alt text](assets/images/Games-2.png)
 
 ## Credits
 
