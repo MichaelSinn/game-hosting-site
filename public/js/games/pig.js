@@ -77,11 +77,11 @@ function draw() {
 		cursor(ARROW, mouseX, mouseY);
 		noLoop();
 	}
-	fill(color(255, 255, 255));
+	fill(color(0, 0, 0));
 	textSize(30);
 	textAlign(CENTER);
-	text(score, 200, 50);
-	text(lives, 20, 50);
+	text(`Score: ${score}`, 300, 50);
+	text(`Lives: ${lives}`, 100, 50);
 	drawCursor();
 }
 
@@ -104,7 +104,9 @@ function shoot() {
 function mousePressed() {
 	if (mouseX > 0 && mouseX < 400 && mouseY > 0 && mouseY < 400) {
 		const playSound = gunshot.cloneNode();
-		playSound.play();
+		if (!gameOver) {
+			playSound.play();
+		}
 
 		shoot();
 	}
