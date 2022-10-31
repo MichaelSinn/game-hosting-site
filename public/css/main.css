@@ -1,5 +1,7 @@
 h2 {
     font-size: 2.5rem;
+    text-align: center;
+    font-weight: 600;
 }
 
 .score > li:nth-child(1)::before {
@@ -24,6 +26,18 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 75px 0;
+}
+
+.game-title {
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    z-index: 2;
+    font-size: 2rem;
+    font-weight: 600;
+    transition: none;
+    border-radius: 10px;
 }
 
 .carousel {
@@ -40,7 +54,6 @@ h2 {
     inset: 0;
     opacity: 0;
     transition: 200ms opacity ease-in-out;
-    transition-delay: 200ms;
 }
 
 .carousel > ul {
@@ -55,6 +68,8 @@ h2 {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.52);
 }
 
 .slide[data-active] {
@@ -65,26 +80,22 @@ h2 {
 .carousel-button {
     position: absolute;
     z-index: 2;
-    background: none;
     border: none;
     font-size: 4rem;
-    color: #2aefcb;
     cursor: pointer;
-    border-radius: 5px;
-    padding: 0 .5rem;
-    background: rgba(0, 0, 0, .15);
-    vertical-align: middle;
+    border-radius: 100px;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, .2);
+}
+
+#play-button {
+    padding: 30px 60px;
 }
 
 .carousel-button:hover,
 .carousel-button:focus {
-    color: white;
-    background-color: rgba(0, 0, 0, .25);
-}
-
-.carousel-button:focus {
-    outline: 1px solid black;
-    transition: ease-in-out 200ms;
+    color: #00D1B2;
+    background-color: rgba(0, 0, 0, .3);
 }
 
 .prev {
