@@ -3,10 +3,12 @@ const Game = require('../models/Game');
 const Scores = require('../models/Scores');
 const sequelize = require('../config/connection');
 const {Sequelize} = require('sequelize');
+const featuredGameTitles = ['Pop the Pig', 'Snake Game', 'Timmy Game'];
 
 router.get('/', async (req, res) => {
 	const gamesData = await Game.findAll();
-	const games = gamesData.map(game => game.get({plain: true}));
+	const allGames = gamesData.map(game => game.get({plain: true}));
+	const games = allGames.filter(game => featuredGameTitles.includes(game.name));
 	res.render('homepage', {games, logged_in: req.session.logged_in});
 });
 
