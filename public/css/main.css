@@ -69,7 +69,7 @@ h2 {
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
-    box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.52);
+    box-shadow: 10px 10px 19px 0px rgba(255, 255, 255, 0.52);
 }
 
 .slide[data-active] {
@@ -85,17 +85,16 @@ h2 {
     cursor: pointer;
     border-radius: 100px;
     padding: 10px 30px;
-    background: rgba(0, 0, 0, .2);
+    background: rgba(255, 255, 255, .2);
 }
 
 #play-button {
     padding: 30px 60px;
 }
 
-.carousel-button:hover,
-.carousel-button:focus {
+.carousel-button:hover {
     color: #00D1B2;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(255, 255, 255, .3);
 }
 
 .prev {
